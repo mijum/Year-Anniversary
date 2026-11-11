@@ -14,15 +14,15 @@ export const SCENE_ORDER: readonly AnniversarySceneId[] = [
 ] as const;
 
 export const CHAPTER_METAS: ChapterMeta[] = [
-  { id: 'WELCOME', chapterNumber: '01', title: 'A Little Surprise', subtitle: 'The Invitation', icon: '💌' },
-  { id: 'LOVE_LETTER', chapterNumber: '02', title: 'A Letter from My Heart', subtitle: 'Bengali Love Letter', icon: '📜' },
-  { id: 'PHOTOGRAPHS', chapterNumber: '03', title: 'Beautiful Memories', subtitle: 'Cherished Moments', icon: '📷' },
-  { id: 'SPECIAL_REASONS', chapterNumber: '04', title: "Why You're Special", subtitle: 'Love Notes & Hearts', icon: '💖' },
-  { id: 'TIMELINE', chapterNumber: '05', title: '365 Days Together', subtitle: 'Constellation of Time', icon: '✨' },
-  { id: 'WISHES_GARDEN', chapterNumber: '06', title: 'A Garden of Wishes', subtitle: 'Blooming Prayers', icon: '🌸' },
-  { id: 'OPEN_WHEN', chapterNumber: '07', title: 'Open When You Need Love', subtitle: 'Keepsake Letters', icon: '📬' },
-  { id: 'ANNIVERSARY_REVEAL', chapterNumber: '08', title: 'Our First Anniversary', subtitle: 'Grand 1 Year Celebration', icon: '🎉' },
-  { id: 'FINAL_SURPRISE', chapterNumber: '09', title: 'Forever Starts Here', subtitle: 'The Next Chapter', icon: '🌌' },
+  { id: 'WELCOME', chapterNumber: '০১', title: 'একটি মিষ্টি চিঠি', subtitle: 'সারপ্রাইজ আমন্ত্রণ', icon: '💌' },
+  { id: 'LOVE_LETTER', chapterNumber: '০২', title: 'হৃদয় থেকে চিঠি', subtitle: 'ভালোবাসার বার্তা', icon: '📜' },
+  { id: 'PHOTOGRAPHS', chapterNumber: '০৩', title: 'সুন্দর কিছু স্মৃতি', subtitle: 'মূল্যবান স্মৃতিচ্ছবি', icon: '📷' },
+  { id: 'SPECIAL_REASONS', chapterNumber: '০৪', title: 'তুমি কেন এত বিশেষ', subtitle: 'ভালোবাসার ওরিগামি চিঠি', icon: '💖' },
+  { id: 'TIMELINE', chapterNumber: '০৫', title: '৩৬৫ দিনের পথচলা', subtitle: 'সময়ের নক্ষত্রমালা', icon: '✨' },
+  { id: 'WISHES_GARDEN', chapterNumber: '০৬', title: 'প্রার্থনার স্নিগ্ধ বাগান', subtitle: 'ফোটা ফুলের দোয়া', icon: '🌸' },
+  { id: 'OPEN_WHEN', chapterNumber: '০৭', title: 'যখন ভালোবাসা চাইবে', subtitle: 'স্মৃতিমধুর ৫টি চিঠি', icon: '📬' },
+  { id: 'ANNIVERSARY_REVEAL', chapterNumber: '০৮', title: 'আমাদের ১ম বার্ষিকী', subtitle: '১ বছর পূর্তির আনন্দ', icon: '🎉' },
+  { id: 'FINAL_SURPRISE', chapterNumber: '০৯', title: 'চিরদিনের সূচনা', subtitle: 'অনন্তকালের গল্প', icon: '🌌' },
 ];
 
 export function useSceneManager(initialScene: AnniversarySceneId = 'WELCOME') {

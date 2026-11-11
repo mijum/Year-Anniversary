@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, Cambria, serif;
-  --font-display: "Playfair Display", "Cormorant Garamond", serif;
+  --font-serif: "Noto Serif Bengali", "Playfair Display", "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-display: "Noto Serif Bengali", "Playfair Display", "Cormorant Garamond", serif;
   --font-bengali: "Noto Serif Bengali", "Hind Siliguri", serif;
-  --font-sans: "Plus Jakarta Sans", "Hind Siliguri", system-ui, -apple-system, sans-serif;
+  --font-sans: "Hind Siliguri", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --color-blush: #fcf1f3;
   --color-rose: #d67d8a;
   --color-burgundy: #2a0b18;

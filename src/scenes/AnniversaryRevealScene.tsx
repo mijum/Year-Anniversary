@@ -71,9 +71,9 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
         transition={{ duration: 0.5 }}
         className="relative z-10 flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.25em] uppercase text-[#e5a4b4]/90 shrink-0"
       >
-        <span>Chapter VIII</span>
+        <span>অধ্যায় ০৮</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>Our First Anniversary</span>
+        <span>আমাদের ১ম বার্ষিকী</span>
       </motion.div>
 
       {/* Main Centerpiece Celebration Block */}
@@ -131,7 +131,7 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
             />
             <h1
               className="relative font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight bg-gradient-to-b from-[#fff3d4] via-[#dfb285] to-[#c5844e] bg-clip-text text-transparent"
-              style={{ fontFamily: '"Playfair Display", Georgia, serif' }}
+              style={{ fontFamily: 'var(--font-serif)' }}
             >
               {reveal.centerpiece}
             </h1>
@@ -153,7 +153,7 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
             </motion.div>
           </motion.div>
 
-          {/* Supporting Text: "365 days of love, memories & togetherness ❤️" */}
+          {/* Supporting Text */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
             className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#391425] text-[#fdeef2] border border-[#e2a8b8]/40 hover:bg-[#4d1a32] hover:border-[#f3c2ce]/60 text-xs sm:text-sm font-sans font-medium transition-all cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
             <Sparkles className="h-3.5 w-3.5 text-[#dfb285]" />
-            <span>Celebrate Again 🎉</span>
+            <span>আবার উদযাপন করো 🎉</span>
           </button>
 
           {/* Continue Button */}
@@ -195,7 +195,7 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
             onClick={onContinue}
             className="group relative inline-flex items-center justify-center gap-2 px-7 py-2.5 min-h-[42px] sm:min-h-[44px] rounded-full bg-gradient-to-r from-[#94314e] via-[#b64b67] to-[#862540] text-[#fff5f7] font-sans text-xs sm:text-sm font-semibold tracking-wide shadow-[0_4px_16px_rgba(148,49,78,0.45)] hover:shadow-[0_6px_22px_rgba(148,49,78,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation border border-[#f5c7d2]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
-            <span>Our Final Chapter</span>
+            <span>আমাদের শেষ অধ্যায়</span>
             <ArrowRight className="h-3.5 w-3.5 text-[#ffd1dc] group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
@@ -208,7 +208,7 @@ export const AnniversaryRevealScene: React.FC<AnniversaryRevealSceneProps> = ({
         transition={{ delay: 0.7 }}
         className="relative z-10 text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/75 tracking-wider shrink-0"
       >
-        <span>One Year Down · A Lifetime Together with {recipientName}</span>
+        <span>একটি বছর পার হলো · {recipientName}-এর সাথে আজীবন পথচলা</span>
       </motion.div>
     </div>
   );

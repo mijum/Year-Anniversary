@@ -38,9 +38,9 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.2em] uppercase text-[#e5a4b4]/85 shrink-0"
       >
-        <span>Chapter I</span>
+        <span>অধ্যায় ০১</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>A Little Surprise for {ANNIVERSARY_CONFIG.recipientName}</span>
+        <span>{ANNIVERSARY_CONFIG.recipientName}-এর জন্য একটি মিষ্টি সারপ্রাইজ</span>
       </motion.div>
 
       {/* Main Centerpiece: Message + Floating Animated Envelope */}
@@ -54,7 +54,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
         >
           <div className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] sm:text-[11px] font-sans tracking-widest uppercase text-[#dfb285]">
             <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
-            <span>A Special Surprise</span>
+            <span>একটি বিশেষ চিঠি</span>
             <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
           </div>
           <h1 className="font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide text-[#fdf0f4] text-balance max-w-xs mx-auto leading-snug">
@@ -88,7 +88,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
               handleOpenSurprise();
             }
           }}
-          aria-label="Open anniversary envelope"
+          aria-label="চিঠি খুলুন"
         >
           {/* Subtle Outer Glow Halo */}
           <div className="absolute -inset-2.5 rounded-2xl bg-gradient-to-r from-[#dfb285]/20 via-[#d67d8a]/25 to-[#dfb285]/20 blur-md opacity-70" />
@@ -98,7 +98,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
             {/* Elegant Flatlay Envelope Texture */}
             <img
               src="/letter.jpg"
-              alt="Romantic envelope on floral bed"
+              alt="একটি সুন্দর খাম"
               className={`h-full w-full object-cover transition-all duration-700 ${
                 isOpening ? 'scale-110 filter blur-[1px] opacity-75' : 'scale-100'
               }`}
@@ -143,7 +143,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
                 </motion.div>
 
                 <span className="mt-1 text-[9px] sm:text-[10px] font-sans font-semibold tracking-widest uppercase text-[#fff0f4] bg-[#220712]/85 px-2.5 py-0.5 rounded-full border border-[#e8a2b5]/40 shadow-md backdrop-blur-sm">
-                  Tap to Open
+                  ট্যাপ করে খোলো
                 </span>
               </div>
             )}
@@ -162,7 +162,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
             disabled={isOpening}
             className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:px-8 sm:py-3 min-h-[42px] sm:min-h-[46px] min-w-[200px] sm:min-w-[220px] rounded-full bg-gradient-to-r from-[#94314e] via-[#b64b67] to-[#862540] text-[#fff5f7] font-sans text-xs sm:text-sm font-semibold tracking-wide shadow-[0_4px_16px_rgba(148,49,78,0.45)] hover:shadow-[0_6px_22px_rgba(148,49,78,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation border border-[#f5c7d2]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
-            <span>{isOpening ? 'Opening Your Story...' : ANNIVERSARY_CONFIG.welcomeButtonText}</span>
+            <span>{isOpening ? 'চিঠিটি খোলা হচ্ছে...' : ANNIVERSARY_CONFIG.welcomeButtonText}</span>
             {!isOpening && (
               <Heart className="h-3.5 w-3.5 text-[#ffd1dc] fill-[#ffd1dc] group-hover:scale-110 transition-transform" />
             )}
@@ -177,7 +177,7 @@ export const WelcomeScene: React.FC<WelcomeSceneProps> = ({
         transition={{ delay: 0.4 }}
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/70 tracking-wider shrink-0"
       >
-        A 1st Anniversary Story Dedicated with All My Heart
+        হৃদয়ের গভীর ভালোবাসা দিয়ে তৈরি আমাদের ১ম বার্ষিকীর গল্প
       </motion.p>
     </div>
   );

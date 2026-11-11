@@ -27,9 +27,9 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.2em] uppercase text-[#e5a4b4]/85 shrink-0"
       >
-        <span>Chapter III</span>
+        <span>অধ্যায় ০৩</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>Beautiful Memories</span>
+        <span>সুন্দর কিছু স্মৃতি</span>
       </motion.div>
 
       {/* Main Photographic Scrapbook Presentation */}
@@ -43,14 +43,14 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
         >
           <div className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] sm:text-[11px] font-sans tracking-widest uppercase text-[#dfb285]">
             <Sparkles className="h-2.5 w-2.5" />
-            <span>Cherished Moments</span>
+            <span>প্রিয় মুহূর্তসমূহ</span>
             <Sparkles className="h-2.5 w-2.5" />
           </div>
           <h2 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-[#fce8ee]">
-            Three Precious Photographs ♡
+            তিনটি অমূল্য স্মৃতিচ্ছবি ♡
           </h2>
           <p className="font-serif italic text-[11px] sm:text-xs text-[#e8b5c4] max-w-sm mx-auto">
-            A glimpse into the beautiful memories that defined our first year together.
+            আমাদের প্রথম বছরের ভালোবাসায় ঘেরা স্মরণীয় কিছু সুন্দর মুহূর্ত।
           </p>
         </motion.div>
 
@@ -87,7 +87,7 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
                     handleOpenPhoto(photo);
                   }
                 }}
-                aria-label={`View ${photo.label}`}
+                aria-label={`ছবি দেখুন: ${photo.label}`}
               >
                 {/* Washi Tape Accent at Top of Polaroid */}
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-20 w-12 h-3.5 bg-[#dfb285]/60 backdrop-blur-sm rounded-sm shadow-sm rotate-[-2deg] border border-[#f5d9c2]/40" />
@@ -139,13 +139,13 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
           className="mt-3 sm:mt-4 flex flex-col items-center space-y-1.5 shrink-0"
         >
           <p className="font-serif text-[11px] sm:text-xs text-[#f2cad6] italic">
-            Next, let me tell you a few reasons why you mean the world to me...
+            পরবর্তী: তুমি কেন আমার জীবনে এত বিশেষ ও প্রিয়...
           </p>
           <button
             onClick={onContinue}
             className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:px-8 sm:py-2.5 min-h-[42px] sm:min-h-[44px] rounded-full bg-gradient-to-r from-[#94314e] via-[#b64b67] to-[#862540] text-[#fff5f7] font-sans text-xs sm:text-sm font-semibold tracking-wide shadow-[0_4px_16px_rgba(148,49,78,0.45)] hover:shadow-[0_6px_22px_rgba(148,49,78,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation border border-[#f5c7d2]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
-            <span>Why You're Special 💖</span>
+            <span>তুমি কেন এত বিশেষ 💖</span>
             <ArrowRight className="h-3.5 w-3.5 text-[#ffd1dc] group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
@@ -168,7 +168,7 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
             >
               <button
                 onClick={() => setSelectedPhoto(null)}
-                aria-label="Close photo view"
+                aria-label="ছবি বন্ধ করুন"
                 className="absolute top-2.5 right-2.5 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-[#4a1c2d]/10 hover:bg-[#4a1c2d]/25 text-[#4a1c2d] transition-colors"
               >
                 <X className="h-3.5 w-3.5" />
@@ -193,12 +193,12 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
                     {selectedPhoto.label}
                   </h3>
                   <p className="font-serif italic text-[11px] text-[#823247]">
-                    A special moment frozen in time
+                    সময়ের ফ্রেমে বন্দি সুন্দর এক মুহূর্ত
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-[11px] font-sans text-[#9b3a52] bg-[#fcedf1] px-2 py-0.5 rounded-full border border-[#e8a2b5]/30">
                   <Heart className="h-2.5 w-2.5 fill-[#9b3a52]" />
-                  <span>Rabeya ❤️</span>
+                  <span>{ANNIVERSARY_CONFIG.recipientName} ❤️</span>
                 </div>
               </div>
             </motion.div>
@@ -213,7 +213,7 @@ export const PhotoMemoriesScene: React.FC<PhotoMemoriesSceneProps> = ({ onContin
         transition={{ delay: 0.6 }}
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/70 tracking-wider shrink-0"
       >
-        Tap any photograph to view in full detail
+        সম্পূর্ণ ছবিটি দেখতে যেকোনো স্মৃতিতে ট্যাপ করুন
       </motion.p>
     </div>
   );

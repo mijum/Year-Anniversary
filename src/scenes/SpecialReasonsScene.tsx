@@ -33,9 +33,9 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.2em] uppercase text-[#e5a4b4]/85 shrink-0"
       >
-        <span>Chapter IV</span>
+        <span>অধ্যায় ০৪</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>Why You're Special</span>
+        <span>তুমি কেন এত বিশেষ</span>
       </motion.div>
 
       {/* Main Content Area */}
@@ -49,21 +49,21 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
         >
           <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#351224]/70 border border-[#e8a2b5]/30 text-[10px] sm:text-[11px] font-sans tracking-widest uppercase text-[#dfb285] backdrop-blur-sm">
             <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
-            <span>Little Origami Love Notes</span>
+            <span>ভালোবাসার ওরিগামি চিঠি</span>
             <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
           </div>
 
           <h2 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-[#fce8ee]">
-            Why You Are So Precious to Me ♡
+            তুমি কেন আমার এত প্রিয় ♡
           </h2>
 
           <p className="font-serif italic text-[11px] sm:text-xs text-[#e8b5c4] max-w-sm mx-auto">
-            A keepsake jar of folded paper hearts. Tap each one to unfold an appreciation written for you, {recipientName}.
+            একটি জারের মধ্যে সাজানো ভাঁজ করা ছোট্ট চিঠি। প্রতিটি চিঠি ট্যাপ করে খুলে দেখো, {recipientName}।
           </p>
 
           {/* Discovery Progress Meter */}
-          <div className="pt-0.5 flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-mono text-[#dfb285]">
-            <span>{openedIds.length} of {specialReasons.length} unfolded</span>
+          <div className="pt-0.5 flex items-center justify-center gap-2 text-[10px] sm:text-[11px] font-sans text-[#dfb285]">
+            <span>{specialReasons.length}-এর মধ্যে {openedIds.length}টি খোলা হয়েছে</span>
             <div className="h-1.5 w-20 bg-[#3d152a] rounded-full overflow-hidden border border-[#e8a2b5]/30">
               <div
                 className="h-full bg-gradient-to-r from-[#dfb285] to-[#f48fb1] transition-all duration-500 rounded-full"
@@ -94,7 +94,7 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
                 }`}
                 role="button"
                 tabIndex={0}
-                aria-label={`Unfold note about ${reason.title}`}
+                aria-label={`চিঠি খুলুন: ${reason.title}`}
               >
                 {/* Subtle Glow Aura */}
                 <div
@@ -113,11 +113,11 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
                   {isOpened ? (
                     <div className="flex items-center gap-0.5 text-[9px] font-sans font-medium text-[#7a2039] bg-[#fcedf1] px-1.5 py-0.5 rounded-full border border-[#e8a2b5]/40">
                       <Check className="h-2 w-2" />
-                      <span>Read</span>
+                      <span>পড়া হয়েছে</span>
                     </div>
                   ) : (
                     <span className="text-[9px] font-sans tracking-wider uppercase text-[#dfb285]">
-                      Open
+                      খোলো
                     </span>
                   )}
                 </div>
@@ -154,15 +154,15 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
         >
           <p className="font-serif text-[11px] sm:text-xs text-[#f2cad6] italic">
             {allOpened
-              ? 'Every piece of my heart belongs to you.'
-              : 'Feel free to read them all or continue to our timeline...'}
+              ? 'আমার হৃদয়ের প্রতিটি অনুভূতি কেবল তোমারই জন্য।'
+              : 'সবগুলো চিঠি পড়ে দেখো অথবা আমাদের টাইমলাইনে চলো...'}
           </p>
 
           <button
             onClick={onContinue}
             className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:px-8 sm:py-2.5 min-h-[42px] sm:min-h-[44px] rounded-full bg-gradient-to-r from-[#94314e] via-[#b64b67] to-[#862540] text-[#fff5f7] font-sans text-xs sm:text-sm font-semibold tracking-wide shadow-[0_4px_16px_rgba(148,49,78,0.45)] hover:shadow-[0_6px_22px_rgba(148,49,78,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation border border-[#f5c7d2]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
-            <span>Our 365 Days Timeline</span>
+            <span>আমাদের ৩৬৫ দিনের টাইমলাইন</span>
             <ArrowRight className="h-3.5 w-3.5 text-[#ffd1dc] group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
@@ -189,7 +189,7 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
               <button
                 onClick={() => setSelectedReason(null)}
                 className="absolute top-3 right-3 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-[#4a1c2d]/10 hover:bg-[#4a1c2d]/20 text-[#4a1c2d] transition-colors"
-                aria-label="Close note"
+                aria-label="চিঠি বন্ধ করুন"
               >
                 <X className="h-3.5 w-3.5" />
               </button>
@@ -203,7 +203,7 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
 
                 <div className="space-y-0.5">
                   <span className="text-[10px] font-sans tracking-widest uppercase text-[#8f495c] font-semibold">
-                    Unfolded Note for {recipientName}
+                    {recipientName}-এর জন্য খোলা চিঠি
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-bold text-[#591b2c]">
                     {selectedReason.title}
@@ -221,7 +221,7 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
                     onClick={() => setSelectedReason(null)}
                     className="px-5 py-1.5 rounded-full bg-[#4a1628] text-white text-xs font-sans font-medium hover:bg-[#601c34] transition-colors"
                   >
-                    Keep in My Heart ♡
+                    হৃদয়ে যত্ন করে রাখলাম ♡
                   </button>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export const SpecialReasonsScene: React.FC<SpecialReasonsSceneProps> = ({ onCont
         transition={{ delay: 0.6 }}
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/70 tracking-wider shrink-0"
       >
-        Every reason is a reminder of why 365 days felt like a dream
+        প্রতিটি কারণই মনে করিয়ে দেয় এই ৩৬৫ দিন ভালোবাসার এক মধুর স্বপ্নের মতো কেটেছে
       </motion.p>
     </div>
   );

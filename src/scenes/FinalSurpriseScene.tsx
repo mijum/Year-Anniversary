@@ -31,9 +31,9 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.25em] uppercase text-[#e5a4b4]/90 shrink-0"
       >
-        <span>Chapter IX</span>
+        <span>অধ্যায় ০৯</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>Forever Starts Here</span>
+        <span>চিরদিনের সূচনা</span>
       </motion.div>
 
       {/* Main Night Sky Romantic Message Container */}
@@ -74,7 +74,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="font-serif italic text-base sm:text-lg md:text-xl text-[#f5d7df] tracking-wide max-w-md mx-auto leading-relaxed"
-            style={{ fontFamily: '"Playfair Display", Georgia, serif' }}
+            style={{ fontFamily: 'var(--font-serif)' }}
           >
             "{final.message1}"
           </motion.p>
@@ -97,7 +97,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
             className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffe3ea] to-[#dfb285] bg-clip-text text-transparent"
-            style={{ fontFamily: '"Playfair Display", Georgia, serif' }}
+            style={{ fontFamily: 'var(--font-serif)' }}
           >
             {final.message2}
           </motion.h2>
@@ -127,7 +127,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
             className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#391425]/80 text-[#fdeef2] border border-[#e2a8b8]/40 hover:bg-[#4d1a32] hover:border-[#dfb285] text-xs font-sans font-medium transition-all cursor-pointer backdrop-blur-md active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
             <Star className="h-3 w-3 text-[#dfb285] fill-[#dfb285]" />
-            <span>Secret Starlight Note ✨</span>
+            <span>গোপন তারার চিঠি ✨</span>
           </button>
 
           {/* Replay Button */}
@@ -162,7 +162,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
               <button
                 onClick={() => setShowSecretNote(false)}
                 className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-[#4a1c2d]/10 hover:bg-[#4a1c2d]/20 text-[#4a1c2d] transition-colors"
-                aria-label="Close note"
+                aria-label="চিঠি বন্ধ করুন"
               >
                 <X className="h-3.5 w-3.5" />
               </button>
@@ -174,15 +174,18 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
 
                 <div className="space-y-0.5">
                   <span className="text-[10px] font-sans tracking-widest uppercase text-[#8f495c] font-semibold">
-                    A Secret Starlight Whisper
+                    একটি গোপন তারার বার্তা
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-bold text-[#591b2c]">
-                    For My Beloved Rabeya
+                    আমার প্রিয়তম {recipientName}-এর জন্য
                   </h3>
                 </div>
 
                 <div className="p-3 rounded-xl bg-white/80 border border-[#ecd5dc] text-left">
-                  <p className="font-serif italic text-xs sm:text-sm leading-relaxed text-[#3a1d29]">
+                  <p
+                    className="font-serif italic text-xs sm:text-sm leading-relaxed text-[#3a1d29]"
+                    style={{ fontFamily: 'var(--font-serif)' }}
+                  >
                     "{final.easterEggNote}"
                   </p>
                 </div>
@@ -191,7 +194,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
                   onClick={() => setShowSecretNote(false)}
                   className="px-5 py-1.5 rounded-full bg-[#4a1628] text-white text-xs font-sans font-medium hover:bg-[#601c34] transition-colors"
                 >
-                  Close with a Smile ♡
+                  মিষ্টি হাসিমুখে বন্ধ করো ♡
                 </button>
               </div>
             </motion.div>
@@ -206,7 +209,7 @@ export const FinalSurpriseScene: React.FC<FinalSurpriseSceneProps> = ({ onRestar
         transition={{ delay: 0.8 }}
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/75 tracking-wider shrink-0"
       >
-        Happy 1st Anniversary, {recipientName} ♡ Forever & Always
+        শুভ ১ম বার্ষিকী, {recipientName} ♡ চিরকাল ও সবসময়
       </motion.p>
     </div>
   );

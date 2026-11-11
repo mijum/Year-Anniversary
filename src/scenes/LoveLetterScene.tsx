@@ -19,9 +19,9 @@ export const LoveLetterScene: React.FC<LoveLetterSceneProps> = ({ onContinue }) 
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.2em] uppercase text-[#e5a4b4]/85 shrink-0"
       >
-        <span>Chapter II</span>
+        <span>অধ্যায় ০২</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>A Letter from My Heart</span>
+        <span>হৃদয় থেকে একটি চিঠি</span>
       </motion.div>
 
       {/* Main Vintage Parchment Letter Container */}
@@ -155,7 +155,7 @@ export const LoveLetterScene: React.FC<LoveLetterSceneProps> = ({ onContinue }) 
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/75 tracking-wider flex items-center gap-1 shrink-0"
       >
         <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
-        <span>Dedicated to {recipientName} · 365 Days of Togetherness</span>
+        <span>{recipientName}-এর জন্য উৎসর্গীকৃত · ৩৬৫ দিনের ভালোবাসা</span>
         <Sparkles className="h-2.5 w-2.5 text-[#dfb285]" />
       </motion.div>
     </div>

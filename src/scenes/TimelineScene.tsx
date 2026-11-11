@@ -28,9 +28,9 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
         transition={{ duration: 0.5 }}
         className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans tracking-[0.2em] uppercase text-[#e5a4b4]/85 shrink-0"
       >
-        <span>Chapter V</span>
+        <span>অধ্যায় ০৫</span>
         <span aria-hidden="true" className="text-[#dfb285]">·</span>
-        <span>365 Days Together</span>
+        <span>৩৬৫ দিনের পথচলা</span>
       </motion.div>
 
       {/* Main Content Area */}
@@ -44,16 +44,16 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
         >
           <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#351224]/70 border border-[#e8a2b5]/30 text-[10px] sm:text-[11px] font-sans tracking-widest uppercase text-[#dfb285] backdrop-blur-sm">
             <Star className="h-2.5 w-2.5 text-[#dfb285] fill-[#dfb285]" />
-            <span>Our Celestial Starmap</span>
+            <span>আমাদের নক্ষত্রখচিত টাইমলাইন</span>
             <Star className="h-2.5 w-2.5 text-[#dfb285] fill-[#dfb285]" />
           </div>
 
           <h2 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold tracking-wide text-[#fce8ee]">
-            Our First 365 Days Across the Stars ✨
+            নক্ষত্রমালার মাঝে আমাদের প্রথম ৩৬৫ দিন ✨
           </h2>
 
           <p className="font-serif italic text-[11px] sm:text-xs text-[#e8b5c4] max-w-sm mx-auto">
-            From our quiet beginning to this milestone moment. Tap each node to journey through our first year.
+            আমাদের সূচনা থেকে আজকের এই সুন্দর দিন পর্যন্ত। স্মৃতিগুলো দেখতে প্রতিটি নোডে ট্যাপ করো।
           </p>
         </motion.div>
 
@@ -71,7 +71,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
                   key={milestone.id}
                   onClick={() => handleSelectMilestone(idx)}
                   className="relative z-10 flex flex-col items-center group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285] rounded-full"
-                  aria-label={`Select ${milestone.period}`}
+                  aria-label={`স্মৃতি নির্বাচন: ${milestone.period}`}
                 >
                   <motion.div
                     animate={
@@ -130,7 +130,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
                   </div>
 
                   <span className="text-[10px] font-mono text-[#dfb285] bg-[#3a1325] px-2 py-0.5 rounded-full border border-[#e8a2b5]/30">
-                    Step {activeIndex + 1} of {timelineMilestones.length}
+                    ধাপ {activeIndex + 1} / {timelineMilestones.length}
                   </span>
                 </div>
 
@@ -164,14 +164,14 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
           className="mt-3 sm:mt-4 flex flex-col items-center space-y-1.5 shrink-0"
         >
           <p className="font-serif text-[11px] sm:text-xs text-[#f2cad6] italic">
-            Next, step into a magical garden blooming with heartfelt prayers...
+            পরবর্তী: ভালোবাসার দোয়া ও প্রার্থনার স্নিগ্ধ বাগান...
           </p>
 
           <button
             onClick={onContinue}
             className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:px-8 sm:py-2.5 min-h-[42px] sm:min-h-[44px] rounded-full bg-gradient-to-r from-[#94314e] via-[#b64b67] to-[#862540] text-[#fff5f7] font-sans text-xs sm:text-sm font-semibold tracking-wide shadow-[0_4px_16px_rgba(148,49,78,0.45)] hover:shadow-[0_6px_22px_rgba(148,49,78,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer touch-manipulation border border-[#f5c7d2]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dfb285]"
           >
-            <span>A Garden of Wishes 🌸</span>
+            <span>প্রার্থনার বাগান 🌸</span>
             <ArrowRight className="h-3.5 w-3.5 text-[#ffd1dc] group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
@@ -184,7 +184,7 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({ onContinue }) => {
         transition={{ delay: 0.6 }}
         className="text-[9px] sm:text-[11px] font-sans text-[#e5a4b4]/70 tracking-wider shrink-0"
       >
-        Every day of these 365 days has been a blessing with {recipientName}
+        এই ৩৬৫ দিনের প্রতিটি মুহূর্ত {recipientName}-এর সাথে এক অপার আশীর্বাদ
       </motion.p>
     </div>
   );

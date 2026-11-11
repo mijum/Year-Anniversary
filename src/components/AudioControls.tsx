@@ -101,8 +101,8 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
           >
             <span className="text-xs">{currentChapterMeta.icon}</span>
             <div className="flex flex-col text-left">
-              <span className="text-[9px] font-mono text-[#dfb285] leading-none">
-                Ch. {currentChapterMeta.chapterNumber} of {totalChapters}
+              <span className="text-[9px] font-sans text-[#dfb285] leading-none">
+                অধ্যায় {currentChapterMeta.chapterNumber}
               </span>
               <span className="hidden sm:inline text-[11px] font-serif font-medium text-[#fce8ee] leading-tight truncate max-w-[120px]">
                 {currentChapterMeta.title}
@@ -218,13 +218,13 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
             <div className="flex items-center gap-2">
               <Sliders className="h-4 w-4 text-[#dfb285]" />
               <span className="font-serif text-sm font-medium tracking-wide text-[#fce8ee]">
-                Music Box Volume
+                গানের ভলিউম
               </span>
             </div>
             <button
               onClick={() => setIsVolumeOpen(false)}
               className="text-[#d8a8b5] hover:text-white p-1"
-              aria-label="Close volume settings"
+              aria-label="ভলিউম সেটিংস বন্ধ করুন"
             >
               <X className="h-3.5 w-3.5" />
             </button>
@@ -236,10 +236,10 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
                 onClick={handleToggleMute}
                 className="hover:underline flex items-center gap-1"
               >
-                {isMuted ? 'Muted' : `${Math.round(volume * 100)}% Volume`}
+                {isMuted ? 'নিঃশব্দ' : `${Math.round(volume * 100)}% ভলিউম`}
               </button>
-              <span className="text-[10px] text-[#dfb285] font-mono">
-                {isPlaying && !isMuted ? 'Playing' : 'Paused'}
+              <span className="text-[10px] text-[#dfb285] font-sans">
+                {isPlaying && !isMuted ? 'বাজছে' : 'বিরতি'}
               </span>
             </div>
 
@@ -252,7 +252,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
               value={isMuted ? 0 : volume}
               onChange={handleVolumeChange}
               className="w-full accent-[#dfb285] bg-[#3a1527] h-1.5 rounded-lg appearance-none cursor-pointer"
-              aria-label="Adjust music volume"
+              aria-label="ভলিউম পরিবর্তন করুন"
             />
 
             <div className="flex items-center justify-between pt-1">
@@ -261,14 +261,14 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#3d162b] hover:bg-[#501a37] text-xs font-sans text-[#fce8ee] transition-colors"
               >
                 {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3 fill-current" />}
-                <span>{isPlaying ? 'Pause' : 'Play'}</span>
+                <span>{isPlaying ? 'থামান' : 'চালান'}</span>
               </button>
               <button
                 onClick={handleToggleMute}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#3d162b] hover:bg-[#501a37] text-xs font-sans text-[#fce8ee] transition-colors"
               >
                 {isMuted ? <Volume2 className="h-3 w-3" /> : <VolumeX className="h-3 w-3" />}
-                <span>{isMuted ? 'Unmute' : 'Mute'}</span>
+                <span>{isMuted ? 'শব্দ চালু' : 'নিঃশব্দ'}</span>
               </button>
             </div>
           </div>
@@ -289,13 +289,13 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
               <div className="flex items-center gap-2">
                 <Music className="h-4 w-4 text-[#dfb285]" />
                 <h3 className="font-serif text-lg tracking-wide text-[#fce8ee]">
-                  Our Story Chapters
+                  আমাদের গল্পের অধ্যায়সমূহ
                 </h3>
               </div>
               <button
                 onClick={() => setIsNavOpen(false)}
                 className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-white/10 text-[#d8a8b5] transition-colors"
-                aria-label="Close story navigation"
+                aria-label="অধ্যায় তালিকা বন্ধ করুন"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -322,8 +322,8 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
                       <span className="text-base">{chapter.icon}</span>
                       <div className="flex flex-col">
                         <div className="flex items-center gap-2">
-                          <span className="text-[11px] font-mono text-[#dfb285]">
-                            Ch. {chapter.chapterNumber}
+                          <span className="text-[11px] font-sans text-[#dfb285]">
+                            অধ্যায় {chapter.chapterNumber}
                           </span>
                           <span className="text-sm font-sans font-medium text-[#fce8ee]">
                             {chapter.title}
