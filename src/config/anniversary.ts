@@ -261,7 +261,7 @@ export const ANNIVERSARY_CONFIG: AnniversaryConfig = {
   },
 
   audio: {
-    backgroundMusicUrl: '',
+    backgroundMusicUrl: '/music.m4a',
     enableSoundEffects: true,
   },
 };

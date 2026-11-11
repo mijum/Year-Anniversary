@@ -72,7 +72,7 @@ class RomanticAudioEngine {
         if (!this.externalAudio) {
           this.externalAudio = new Audio(this.currentUrl);
           this.externalAudio.loop = true;
-          this.externalAudio.volume = this.isMuted ? 0 : this.volume * 0.45;
+          this.externalAudio.volume = this.isMuted ? 0 : this.volume;
         }
         await this.externalAudio.play();
         return;
@@ -197,7 +197,7 @@ class RomanticAudioEngine {
     }
 
     if (this.externalAudio) {
-      this.externalAudio.volume = this.isMuted ? 0 : this.volume * 0.45;
+      this.externalAudio.volume = this.isMuted ? 0 : this.volume;
     }
 
     return this.isMuted;
@@ -215,7 +215,7 @@ class RomanticAudioEngine {
     }
 
     if (this.externalAudio && !this.isMuted) {
-      this.externalAudio.volume = this.volume * 0.45;
+      this.externalAudio.volume = this.volume;
     }
   }
 
